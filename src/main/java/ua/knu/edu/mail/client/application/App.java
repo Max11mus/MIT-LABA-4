@@ -1,6 +1,6 @@
 package ua.knu.edu.mail.client.application;
 
-import ua.knu.edu.mail.client.transport.GoogleMailTransport;
+import ua.knu.edu.mail.client.transport.LoggingGoogleMailTransport;
 import ua.knu.edu.mail.client.transport.MailTransportInterface;
 
 import javax.mail.Message;
@@ -8,7 +8,7 @@ import javax.mail.MessagingException;
 
 public class App {
     public static void main(String[] args) throws MessagingException {
-        MailTransportInterface transport = new GoogleMailTransport();
+        MailTransportInterface transport = new LoggingGoogleMailTransport();
 
         String login = "mail.lab.ua.edu.knu@gmail.com";
         String password = "ndbflzcnebaeclvc";

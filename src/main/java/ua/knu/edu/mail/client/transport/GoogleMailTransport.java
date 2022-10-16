@@ -17,7 +17,8 @@ import java.util.Properties;
 public class GoogleMailTransport implements MailTransportInterface {
 
     @Override
-    public void sendHelloEmail(String login, String password, String message, String recipients) throws MessagingException {
+    public void sendHelloEmail(String login, String password, String message, String recipients)
+            throws MessagingException {
 
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com"); //SMTP Host
@@ -55,7 +56,8 @@ public class GoogleMailTransport implements MailTransportInterface {
     }
 
     @Override
-    public Message[] getAllMessages(String login, String password) throws MessagingException {
+    public Message[] getAllMessages(String login, String password)
+            throws MessagingException {
         String imapHost = "imap.gmail.com";
 
         Properties props = new Properties();
